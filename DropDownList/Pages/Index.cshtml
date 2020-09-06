@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Binding Data to DropDown List ";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Binding Data to DropDown List</h1>
+    <hr/>
+
+    <select id="Select1" asp-items="@(new SelectList(Model.DisplayData, "DispId", "SaleMan"))">
+        <option value="" selected disabled >-- Select SaleMan --</option>
+
+    </select>
+
+</div>
